@@ -50,9 +50,14 @@
 }
 
 #previousStatus {
-  text-align: center;
-  display: inline-block;
-  margin-top: 20%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: azure;
+  z-index: 1000;
 }
 
 #submit {
@@ -89,4 +94,11 @@
   text-align: center;
   margin-top: 5%;
   color: grey;
+}
+#problems {
+  /* position: absolute;
+  visibility: hidden; */
+}
+body {
+  overflow: hidden;
 }

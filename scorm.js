@@ -1,19 +1,19 @@
 //スライダー処理
-$(document).ready(function() {
-  $(".slider").on("init", function() {
-    $(".slide__content").addClass("on");
-  });
-  $(".slider").slick({
-    autoplay: false,
-    dots: true
-  });
-  $(".slider").on("beforeChange", function() {
-    $(".slide__content").removeClass("on");
-  });
-  $(".slider").on("afterChange", function() {
-    $(".slide__content").addClass("on");
-  });
-});
+// $(document).ready(function() {
+//   $(".slider").on("init", function() {
+//     $(".slide__content").addClass("on");
+//   });
+//   $(".slider").slick({
+//     autoplay: false,
+//     dots: true
+//   });
+//   $(".slider").on("beforeChange", function() {
+//     $(".slide__content").removeClass("on");
+//   });
+//   $(".slider").on("afterChange", function() {
+//     $(".slide__content").addClass("on");
+//   });
+// });
 
 //scorm処理
 var API;
@@ -37,9 +37,27 @@ function init() {
     API.LMSSetValue("cmi.core.lesson_status", "passed");
   }
   //試験開始ボタンクリックでの画面移動
-  $("#previousScoreButton").click(function() {
-    $("#previousStatus").css("display", "none");
+  $("#previousScoreButton").click(function () {
+    console.log("click")
     $("#problems").css("display", "block");
+    $(function() {
+      $(".slider").on("init", function() {
+        $(".slide__content").addClass("on");
+      });
+      $(".slider").slick({
+        autoplay: false,
+        dots: true
+      });
+      $(".slider").on("beforeChange", function() {
+        $(".slide__content").removeClass("on");
+      });
+      $(".slider").on("afterChange", function() {
+        $(".slide__content").addClass("on");
+      });
+    });
+    setTimeout(function () {
+      $("#previousStatus").css("display", "none");
+    },400)
   });
 
   //採点ボタンクリック後の処理
