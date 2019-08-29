@@ -1,0 +1,92 @@
+#big5 {
+  margin-top: 5%;
+}
+
+.slider {
+  margin: auto;
+  width: 79%;
+  height: 50vh;
+}
+.slide {
+  position: relative;
+  text-align: center;
+}
+.slide img {
+  height: auto;
+  width: 100%;
+}
+.slide__content-wrap {
+  left: 50%;
+  position: absolute;
+  top: 70%;
+}
+.slide__content {
+  display: block;
+  opacity: 0;
+  transform: translate(-50%, 20%);
+  transition: 0s;
+}
+.slide__content.on {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  transition: 0.8s;
+  background: #fff;
+  color: #000;
+  padding: 10%;
+  box-shadow: 6px 10px 5px #ddd;
+  border-radius: 2%;
+}
+.slide__title {
+  font-size: 1rem;
+}
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+}
+
+.slick-prev {
+  left: 1%;
+}
+
+#previousStatus {
+  text-align: center;
+  display: inline-block;
+  margin-top: 20%;
+}
+
+#submit {
+  font-size: 1rem;
+}
+
+.mathProblems {
+  word-break: break-all;
+}
+
+.answers {
+  text-align: center;
+}
+
+.toLeft {
+  list-style: none;
+  text-align: left;
+  display: inline-block;
+}
+
+#resultText {
+  text-align: center;
+  margin-top: 10%;
+  color: green;
+}
+
+#resultTextUnder {
+  text-align: center;
+  margin-top: 10%;
+  color: green;
+}
+
+#briefAnswers {
+  text-align: center;
+  margin-top: 5%;
+  color: grey;
+}
